@@ -1,0 +1,101 @@
+site_name: 网络安全实验课件
+site_url: ""
+site_description: 基于 LabEx 技能树的网络安全实验教程
+site_author: QClaw
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+repo_url: ""
+repo_name: ""
+edit_uri: ""
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.mark
+  - pymdownx.tilde
+  - footnotes
+  - attr_list
+  - md_in_html
+  - def_list
+  - tables
+  - fenced_code
+
+nav:
+  - 首页: index.md
+  - 环境搭建:
+      - 环境搭建指南: 01_环境搭建/README.md
+  - 密码破解:
+      - 实验01：使用 Hydra 破解密码: 02_密码破解/01_hydra_password_cracking.md
+      - 实验02：破解特定用户账户: 02_密码破解/02_hydra_targeted_user.md
+      - 实验15：使用 John the Ripper 破解 ZIP 密码: 02_密码破解/03_john_zip_cracking.md
+  - 网络扫描:
+      - 实验03：使用 Nmap 进行网络扫描: 03_网络扫描/01_nmap_basic.md
+      - 实验04：使用 Nmap 扫描子网: 03_网络扫描/02_nmap_subnet.md
+      - 实验12：使用 Nmap 扫描漏洞: 03_网络扫描/03_nmap_vuln.md
+      - 实验17：使用 Masscan 扫描端口: 03_网络扫描/04_masscan.md
+      - 实验19：使用 Nikto 扫描 Web 服务器: 03_网络扫描/05_nikto.md
+  - 流量分析:
+      - 实验09：使用 Wireshark 进行网络分析: 04_流量分析/01_wireshark_basic.md
+      - 实验10：使用 Wireshark 捕获 Google 流量: 04_流量分析/02_wireshark_google.md
+      - 实验14：在 Wireshark 中过滤流量: 04_流量分析/03_wireshark_filters.md
+  - 网络工具:
+      - 实验07：使用 Netcat 进行简单的网络通信: 05_网络工具/01_netcat_basic.md
+      - 实验08：使用 Netcat 接收消息: 05_网络工具/02_netcat_listener.md
+  - 加密与安全:
+      - 实验05：OpenSSL 加密入门: 06_加密与安全/01_openssl_intro.md
+      - 实验06：解密绝密文件: 06_加密与安全/02_openssl_decrypt.md
+      - 实验13：使用 OpenSSL 加密文件: 06_加密与安全/03_openssl_encrypt.md
+      - 实验16：使用 Tripwire 监控文件: 06_加密与安全/04_tripwire.md
+      - 实验18：使用 Steghide 隐藏数据: 06_加密与安全/05_steghide.md
+  - 综合实战:
+      - 综合实战：完整渗透测试流程: 07_综合实战/01_comprehensive.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/
+    - icon: fontawesome/brands/weixin
+      link: https://example.com/
+  generator: false
+
+copyright: Copyright © 2026 QClaw · 仅用于教学与学习目的
